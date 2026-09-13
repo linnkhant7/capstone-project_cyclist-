@@ -110,7 +110,7 @@ member_casual,
 `day_of_the_week `;
 
 
--- no. of trips per hour
+-- average ride_length per hour
 
 SELECT
 member_casual,
