@@ -7,7 +7,11 @@ SELECT *
 FROM
 `project-0d7d8808-0446-434b-8e9.cyclistic_project.all_12_months`
 
-WHERE ended_at > started_at;
+WHERE ended_at > started_at
+QUALIFY ROW_NUMBER() OVER (
+PARTITION BY ride_id
+ORDER BY started_at
+) = 1;
 
 # Step 4 - Create Month table in clean 12-Month data 
 
