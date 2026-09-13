@@ -58,32 +58,38 @@ BigQuery was used to combine the monthly datasets into one table and prepare the
 ### Reason
 Microsoft Excel has a worksheet limit of 1,048,576 rows, which makes it unsuitable for handling the complete Cyclistic dataset. Since the combined dataset contains more than 6 million rows, BigQuery was used because it can efficiently process and manage large volumes of data.
 
-### Combining the Data
+### Step 1 - Combining the Data
 The 12 monthly CSV files, covering August 2025 through July 2026, were uploaded to BigQuery as separate tables. These tables were combined using UNION ALL to create a new table called all_12_months.
 The combined table contains 6,037,939 rows, representing all ride records from the 12-month analysis period. This table was then used as the starting point for data validation and cleaning.
 
-### Validating the data 
+<img width="1394" height="690" alt="image" src="https://github.com/user-attachments/assets/1a7daaff-b345-472c-b9c0-292e8d502687" />
 
-SQL Query: Data exploration 
-Before cleaning the data, I am familiarizing myself with the data to find the inconsistencies.
 
-Observation 
-**1.** The table below shows the all column names and their data types.
-<img width="873" height="498" alt="image" src="https://github.com/user-attachments/assets/2af45b3f-66b2-42a7-95f4-d246aeb52d7d" />
+### Step 2 - Validate the 12-Month Dataset
 
-**2.** I checked the combined dataset for missing values in the key fields used in the analysis.
+I validated the combined dataset in BigQuery before cleaning it.
 
-There were **no missing values** in `ride_id`, `started_at`, `ended_at`, or `member_casual`.
+The validation checked for:
 
-**3.** I used `ride_id` to check for possible duplicate records.
+- total rows
+- unique ride IDs
+- possible duplicate ride IDs
+- missing ride IDs
+- missing start times
+- missing end times
+- missing rider types
+- invalid ride times where `ended_at <= started_at`
 
-The dataset contains **6,037,939 total rows** and **6,037,895 unique ride IDs**, resulting in **44 possible duplicate ride IDs**. These records require further review before deciding whether they should be removed.
+### Validation Results
 
-**4.** I checked the start and end timestamps to identify invalid ride times.
-
-There were **868 records** where `ended_at` was earlier than or equal to `started_at`. These rides were considered invalid because they would produce incorrect ride-duration calculations and were excluded during the cleaning process.
-
-**5.** Overall, the validation showed that the dataset was largely complete, with no missing values in the main analysis fields. The main data-quality issues identified were the **44 possible duplicate ride IDs** and **868 invalid ride times**.
+- Total rows: **6,037,939**
+- Unique ride IDs: **6,037,895**
+- Possible duplicate ride IDs: **44**
+- Missing ride IDs: **0**
+- Missing start times: **0**
+- Missing end times: **0**
+- Missing rider types: **0**
+- Invalid ride times: **868**
 
 
 
