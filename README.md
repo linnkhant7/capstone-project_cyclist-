@@ -64,13 +64,10 @@ The combined table contains 6,037,939 rows, representing all ride records from t
 
 <img width="1394" height="690" alt="image" src="https://github.com/user-attachments/assets/1a7daaff-b345-472c-b9c0-292e8d502687" />
 
-
 ### Step 2 - Validate the 12-Month Dataset
 
 I validated the combined dataset in BigQuery before cleaning it.
-
 The validation checked for:
-
 - total rows
 - unique ride IDs
 - possible duplicate ride IDs
@@ -80,16 +77,35 @@ The validation checked for:
 - missing rider types
 - invalid ride times where `ended_at <= started_at`
 
-### Validation Results
+The validation results are shown below:
+<img width="1334" height="191" alt="image" src="https://github.com/user-attachments/assets/fdaa1267-a874-4a34-896a-ff194ea00e14" />
 
-- Total rows: **6,037,939**
-- Unique ride IDs: **6,037,895**
-- Possible duplicate ride IDs: **44**
-- Missing ride IDs: **0**
-- Missing start times: **0**
-- Missing end times: **0**
-- Missing rider types: **0**
-- Invalid ride times: **868**
+### Step 3 - Clean the 12-Month Dataset
+
+I created a cleaned version of the combined dataset in BigQuery.
+
+The cleaning process:
+
+- removed rides where `ended_at <= started_at`
+- removed duplicate ride IDs by keeping one record for each `ride_id`
+
+The cleaned table was then used for the analysis.
+
+### Create Month Column for analysis 
+
+I added a new `month` column to the cleaned dataset using the `started_at` timestamp.
+
+Each ride was assigned a three-letter month label such as `JAN`, `FEB`, `MAR`, and so on. This column was created to support monthly ride analysis.
+
+# Step 4 - Analyze and Share 
+
+SQL Query: Data Analysis 
+Data Visualization: Power BI
+The data is stored appropriately and is now prepared for analysis. I queried multiple relevant tables for the analysis and visualized them in Power BI. 
+The analysis question is: How do annual members and casual riders use Cyclistic bikes differently?
+
+
+
 
 
 
