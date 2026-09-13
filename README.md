@@ -104,13 +104,88 @@ Data Visualization: Power BI
 The data is stored appropriately and is now prepared for analysis. I queried multiple relevant tables for the analysis and visualized them in Power BI. 
 The analysis question is: How do annual members and casual riders use Cyclistic bikes differently?
 
+I compared total rides by month, day of the week, and hour of the day to see how riding patterns differ between casual riders and annual members.
 
 
+<img width="832" height="467" alt="image" src="https://github.com/user-attachments/assets/c5ad1b0d-ac3d-401e-9e5a-0a574128864a" />
+<img width="829" height="200" alt="image" src="https://github.com/user-attachments/assets/45638461-ee84-4c1b-9d30-e0f52e189e5f" />
 
+#### By Month
 
+Annual members recorded more rides than casual riders in every month. Ride activity for both groups decreased from the fall into December and January, then gradually increased again from February through July.
 
+The lowest ride activity occurred around December and January, while some of the highest ride volumes were seen during the warmer months, especially from May through July.
 
+#### By Day of Week
 
+Member rides were highest from Tuesday through Thursday, showing stronger weekday use.
 
+Casual rides followed a different pattern. Their ride volume was lower during the middle of the week and increased toward the weekend, with Saturday having the highest number of casual rides.
 
+The difference between members and casual riders also became much smaller on Saturday and Sunday compared with weekdays.
+
+#### By Hour of Day
+
+Member rides showed two noticeable peaks during the day: one around **8 AM** and a larger peak around **5 PM**.
+
+Casual rides increased more gradually throughout the day and reached their highest level around **5 PM**.
+
+The stronger morning and evening peaks for members may suggest that members use Cyclistic more regularly around typical commuting hours, while 
+casual riders appear to have a more spread-out riding pattern during the day.
+
+** Ride duration of the trips are compared to find the differences in the behavior of casual and member riders.**
+
+<img width="805" height="464" alt="image" src="https://github.com/user-attachments/assets/27adaab1-a983-4302-bf75-956df06f0347" />
+<img width="830" height="191" alt="image" src="https://github.com/user-attachments/assets/c5205b8e-4c24-406d-aefd-177d95094b29" />
+
+#### By Month
+
+Casual riders consistently had longer average rides than annual members in every month.
+
+Casual ride duration was generally between about **17 and 24 minutes**, while member rides stayed much more consistent at around **11 to 13 minutes**.
+
+This shows that even though members take more rides overall, casual riders tend to spend more time on each trip.
+
+#### By Day of Week
+
+The difference in ride duration was especially noticeable on weekends.
+
+Casual riders had their longest average rides on **Saturday and Sunday**, at around **24–25 minutes**, while their weekday rides were shorter.
+
+Member ride duration changed much less throughout the week and remained close to **12–14 minutes**.
+
+This suggests that casual riders not only ride relatively more on weekends, but their weekend trips also tend to last longer.
+
+#### By Hour of Day
+
+Casual riders had longer average ride durations than members throughout the day.
+
+Casual ride duration varied more by hour, while member ride duration remained relatively stable. Member rides generally stayed around **11–13 minutes**, whereas casual rides were often around **20 minutes or more**.
+
+Overall, ride duration shows one of the clearest differences between the two groups: **casual riders take fewer rides, but their individual trips tend to be longer.**
+
+### Summary of Findings
+
+| Area | Annual Members | Casual Riders |
+|---|---|---|
+| Total rides | Higher overall ride volume | Lower overall ride volume |
+| Monthly pattern | More rides every month | Follows the same seasonal pattern but at lower volume |
+| Day of week | Strongest from Tuesday to Thursday | Stronger toward the weekend, especially Saturday |
+| Hour of day | Clear peaks around 8 AM and 5 PM | More spread throughout the day |
+| Average ride duration | Shorter and more consistent, around 11–13 minutes | Longer, usually around 17–24 minutes |
+| Weekend duration | Relatively stable | Longest rides occur on weekends |
+
+## Act
+
+### 1. Target casual riders with weekend membership campaigns
+
+Casual riders are most active on weekends, especially Saturday, and their weekend trips are also among their longest. Cyclistic could run weekend-focused campaigns through the app, email, and social media to promote annual membership when casual riders are most engaged.
+
+### 2. Increase marketing and offer sign-up incentives during peak months
+
+Casual ride volume is highest from May through July and remains strong from August through October. Cyclistic could increase marketing during these high-activity months and offer limited-time membership discounts or sign-up incentives to encourage casual riders to convert while they are actively using the service.
+
+### 3. Use time-of-day and riding behavior for targeted promotions
+
+Member rides show strong peaks around 8 AM and 5 PM, while casual riders have longer average trips throughout much of the day. Cyclistic could target casual riders who ride repeatedly or during regular travel times with personalized membership messages that highlight the convenience and benefits of becoming an annual member.
 
