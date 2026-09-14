@@ -80,7 +80,7 @@ ROUND(
     WHEN 'MAY' THEN 10
     WHEN 'JUN' THEN 11
     WHEN 'JUL' THEN 12
-  END AS month_number,
+  END AS month_number
 FROM `project-0d7d8808-0446-434b-8e9.cyclistic_project.all_12_months_CLEAN`
 GROUP BY 
 member_casual, 
