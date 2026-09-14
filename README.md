@@ -205,5 +205,6 @@ Casual ride volume is highest from May through July and remains strong from Augu
 
 ### 3. Use time-of-day and riding behavior for targeted promotions
 
-Member rides show strong peaks around 8 AM and 5 PM, while casual riders have longer average trips throughout much of the day. Cyclistic could target casual riders who ride repeatedly or during regular travel times with personalized membership messages that highlight the convenience and benefits of becoming an annual member.
+Member rides peak around 8 AM and 5 PM, while casual rides peak later, around 5 PM, and usually last longer—often 20+ minutes versus members’ 11–13 minutes. Cyclistic could shift promotions away from the member-heavy 8 AM period toward times when casual volume and ride length are high, using messaging that emphasizes flexible, unhurried rides over commuting convenience.
+
 
