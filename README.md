@@ -6,6 +6,19 @@ Course: [Google Data Analytics Capstone: Complete a Case Study](https://www.cour
 
 In this case study, I will take on the role of a junior data analyst at Cyclistic, a fictional bike-share company. To address the main business questions, I will follow the six stages of the data analysis process: Ask, Prepare, Process, Analyze, Share, and Act.
 
+### Quick links:
+Data Source: [divvy_tripdata](https://divvy-tripdata.s3.amazonaws.com/index.html)
+
+## SQL Queries
+
+- [01. Data Combining](https://github.com/linnkhant7/capstone-project_cyclist-/blob/main/SQL/01_data_combining.sql)
+- [02. Validating Data](https://github.com/linnkhant7/capstone-project_cyclist-/blob/main/SQL/02_validate_data.sql)
+- [03. Data Cleaning](https://github.com/linnkhant7/capstone-project_cyclist-/blob/main/SQL/03_create_clean_table.sql)
+- [04. Data Analysis](https://github.com/linnkhant7/capstone-project_cyclist-/blob/main/SQL/04_data_analysis.sql)
+
+**Data Visualization** 
+- [Power BI Dashboard](https://app.powerbi.com/groups/me/reports/80c78f87-5295-4262-b039-8246c1d59855/e9e24cfebe2393adb537?experience=power-bi)
+
 ## Background 
 ### Cyclistic 
 
@@ -59,12 +72,15 @@ BigQuery was used to combine the monthly datasets into one table and prepare the
 Microsoft Excel has a worksheet limit of 1,048,576 rows, which makes it unsuitable for handling the complete Cyclistic dataset. Since the combined dataset contains more than 6 million rows, BigQuery was used because it can efficiently process and manage large volumes of data.
 
 ### Step 1 - Combining the Data
+SQL Query: [Data Combining](https://github.com/linnkhant7/capstone-project_cyclist-/blob/main/SQL/01_data_combining.sql)
+
 The 12 monthly CSV files, covering August 2025 through July 2026, were uploaded to BigQuery as separate tables. These tables were combined using UNION ALL to create a new table called all_12_months.
 The combined table contains 6,037,939 rows, representing all ride records from the 12-month analysis period. This table was then used as the starting point for data validation and cleaning.
 
 <img width="1394" height="690" alt="image" src="https://github.com/user-attachments/assets/1a7daaff-b345-472c-b9c0-292e8d502687" />
 
 ### Step 2 - Validate the 12-Month Dataset
+SQL Query: [Validating Data](https://github.com/linnkhant7/capstone-project_cyclist-/blob/main/SQL/02_validate_data.sql)
 
 I validated the combined dataset in BigQuery before cleaning it.
 The validation checked for:
@@ -81,6 +97,7 @@ The validation results are shown below:
 <img width="1334" height="191" alt="image" src="https://github.com/user-attachments/assets/fdaa1267-a874-4a34-896a-ff194ea00e14" />
 
 ### Step 3 - Clean the 12-Month Dataset
+SQL Query: [Data Cleaning](https://github.com/linnkhant7/capstone-project_cyclist-/blob/main/SQL/03_create_clean_table.sql)
 
 I created a cleaned version of the combined dataset in BigQuery.
 
@@ -98,6 +115,7 @@ I added a new `month` column to the cleaned dataset using the `started_at` times
 Each ride was assigned a three-letter month label such as `JAN`, `FEB`, `MAR`, and so on. This column was created to support monthly ride analysis.
 
 # Step 4 - Analyze and Share 
+SQL Query: [Data Analysis](https://github.com/linnkhant7/capstone-project_cyclist-/blob/main/SQL/04_data_analysis.sql)
 
 SQL Query: Data Analysis 
 Data Visualization: Power BI
