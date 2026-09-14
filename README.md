@@ -45,7 +45,7 @@ The analysis will be used to understand the differences in riding behavior betwe
 
 ## Prepare
 ### Data Source
-For this analysis, I will use Cyclistic's historical trip data from August 2025 to July 2026. The data is publicly available through the [divvy_tripdata](https://divvy-tripdata.s3.amazonaws.com/index.html) and is provided by Motivate International Inc.
+For this analysis, I will use Cyclistic's historical trip data from August 2025 to July 2026. The data is publicly available through the [divvy_tripdata](https://divvy-tripdata.s3.amazonaws.com/index.html).
 The dataset can be used to analyze how casual riders and annual members use Cyclistic bikes. However, the data does not include personally identifiable information, so individual riders cannot be tracked or linked to specific purchases.
 
 ## Data Organization
